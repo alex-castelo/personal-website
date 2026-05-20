@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-20T00:00:00Z",
+  "title": "Design System: Àlex Castelo — Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "warm-ash-cream": {
+        "role": "neutral",
+        "displayName": "Warm Ash Cream",
+        "canonical": "oklch(95.4% 0.012 85)",
+        "tonalRamp": [
+          "oklch(76% 0.010 80)",
+          "oklch(80% 0.011 82)",
+          "oklch(84% 0.011 83)",
+          "oklch(87% 0.011 84)",
+          "oklch(90% 0.011 84)",
+          "oklch(92% 0.012 85)",
+          "oklch(94% 0.012 85)",
+          "oklch(95.4% 0.012 85)"
+        ]
+      },
+      "near-black": {
+        "role": "neutral",
+        "displayName": "Near-Black",
+        "canonical": "oklch(13.8% 0.003 85)",
+        "tonalRamp": [
+          "oklch(8% 0.002 85)",
+          "oklch(13.8% 0.003 85)",
+          "oklch(22% 0.005 80)",
+          "oklch(30% 0.007 80)",
+          "oklch(38% 0.008 80)",
+          "oklch(46% 0.010 75)",
+          "oklch(58% 0.011 80)",
+          "oklch(73% 0.009 80)"
+        ]
+      },
+      "press-gray": {
+        "role": "neutral",
+        "displayName": "Press Gray",
+        "canonical": "oklch(40.5% 0.009 75)",
+        "tonalRamp": [
+          "oklch(22% 0.007 75)",
+          "oklch(28% 0.008 75)",
+          "oklch(33% 0.008 75)",
+          "oklch(38% 0.009 75)",
+          "oklch(40.5% 0.009 75)",
+          "oklch(50% 0.009 78)",
+          "oklch(62% 0.009 78)",
+          "oklch(74% 0.008 80)"
+        ]
+      },
+      "caption-gray": {
+        "role": "neutral",
+        "displayName": "Caption Gray",
+        "canonical": "oklch(46.2% 0.010 75)",
+        "tonalRamp": [
+          "oklch(22% 0.007 75)",
+          "oklch(30% 0.009 75)",
+          "oklch(38% 0.010 75)",
+          "oklch(43% 0.010 75)",
+          "oklch(46.2% 0.010 75)",
+          "oklch(56% 0.010 76)",
+          "oklch(67% 0.009 78)",
+          "oklch(78% 0.008 80)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero name only. Never used for section titles or headings elsewhere." },
+      "headline": { "displayName": "Headline", "purpose": "Long-form prose: About paragraphs, Contact intro. Max 640px line length." },
+      "body": { "displayName": "Body", "purpose": "Experience narratives and supporting prose. Max 580px line length." },
+      "label": { "displayName": "Label", "purpose": "Section numbers, date ranges, location, availability, footer metadata. All-caps only." }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "caret-blink",
+        "value": "steps(1, end) 1.12s infinite",
+        "purpose": "The only animation in the system. Applied to the inline cursor glyph after the hero name. Binary on/off; no easing. Disabled under prefers-reduced-motion."
+      },
+      {
+        "name": "ease-state",
+        "value": "160ms ease",
+        "purpose": "Default for all interactive state transitions: color, background, border-color, transform on buttons and nav links."
+      }
+    ],
+    "breakpoints": [
+      { "name": "xl", "value": "1080px", "notes": "col-pad drops from 80px to 56px" },
+      { "name": "lg", "value": "840px", "notes": "hero font drops to 80px, two-col grids collapse to single-col" },
+      { "name": "sm", "value": "520px", "notes": "hero font drops to 58px, col-pad to 24px, nav links compress to 18px gap" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary CTA. Near-Black background, Warm Ash Cream text, pill shape. Appears once in the hero.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">LinkedIn <span class=\"ds-btn-arrow\" aria-hidden=\"true\">↗</span></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; font-size: 15px; font-family: 'Geist', system-ui, sans-serif; letter-spacing: -0.005em; text-decoration: none; border-radius: 999px; border: 1px solid transparent; background: #1a1a1a; color: #f3efe6; transition: transform 160ms ease, background 160ms ease; cursor: pointer; } .ds-btn-arrow { opacity: 0.55; font-size: 13px; } .ds-btn-primary:hover { transform: translateY(-1px); background: oklch(12% 0.007 85); } .ds-btn-primary:focus-visible { outline: 2px solid #1a1a1a; outline-offset: 4px; border-radius: 999px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary CTA. Transparent with Rule Strong border. Used for lower-weight actions alongside the primary.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Get in touch <span class=\"ds-btn-arrow\" aria-hidden=\"true\">↓</span></a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; font-size: 15px; font-family: 'Geist', system-ui, sans-serif; letter-spacing: -0.005em; text-decoration: none; border-radius: 999px; border: 1px solid rgba(26,26,26,0.18); background: transparent; color: #1a1a1a; transition: border-color 160ms ease, background 160ms ease; cursor: pointer; } .ds-btn-ghost .ds-btn-arrow { opacity: 0.55; font-size: 13px; } .ds-btn-ghost:hover { border-color: #1a1a1a; background: rgba(26,26,26,0.04); } .ds-btn-ghost:focus-visible { outline: 2px solid #1a1a1a; outline-offset: 4px; border-radius: 999px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Sticky top bar with backdrop blur. Baseline-aligned name/links. The only component in the system that uses backdrop-filter.",
+      "html": "<nav class=\"ds-nav\"><div class=\"ds-nav__inner\"><a class=\"ds-nav__name\" href=\"#\">Àlex Castelo</a><div class=\"ds-nav__links\"><a class=\"ds-nav__link\" href=\"#\">About</a><a class=\"ds-nav__link\" href=\"#\">Work</a><a class=\"ds-nav__link\" href=\"#\">Contact</a></div></div></nav>",
+      "css": ".ds-nav { position: sticky; top: 0; z-index: 50; background: rgba(243,239,230,0.78); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%); border-bottom: 1px solid rgba(26,26,26,0.08); } .ds-nav__inner { max-width: 1080px; margin: 0 auto; padding: 18px 80px; display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; font-family: 'Geist', system-ui, sans-serif; } .ds-nav__name { font-weight: 500; letter-spacing: -0.01em; text-decoration: none; color: #1a1a1a; } .ds-nav__links { display: flex; gap: 32px; color: #5a564f; } .ds-nav__link { color: inherit; text-decoration: none; transition: color 160ms ease; padding: 10px 0; } .ds-nav__link:hover { color: #1a1a1a; } .ds-nav__link:focus-visible { outline: 2px solid #1a1a1a; outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Section Head",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Signature structural component. Two-column grid: Caption Gray section number left, Near-Black section title right. Repeats for each major section as a named system.",
+      "html": "<div class=\"ds-secthead\"><div class=\"ds-secthead__num\">01</div><h2 class=\"ds-secthead__title\">How I think</h2></div>",
+      "css": ".ds-secthead { display: grid; grid-template-columns: 120px 1fr; gap: 48px; padding-top: 120px; padding-bottom: 56px; font-family: 'Geist', system-ui, sans-serif; } .ds-secthead__num { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6860; font-variant-numeric: tabular-nums; padding-top: 6px; } .ds-secthead__title { font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; color: #1a1a1a; font-weight: 500; margin: 0; padding-top: 6px; }"
+    },
+    {
+      "name": "Caret",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The sole animated element. Blinking Near-Black cursor appended to the hero name. Hardware-stepped blink, reduced-motion aware.",
+      "html": "<span class=\"ds-caret\" aria-hidden=\"true\"></span>",
+      "css": ".ds-caret { display: inline-block; width: 0.42em; height: 0.78em; margin-left: 0.08em; margin-bottom: -0.04em; background: #1a1a1a; vertical-align: baseline; animation: ds-caret-blink 1.12s steps(1, end) infinite; } @keyframes ds-caret-blink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } } @media (prefers-reduced-motion: reduce) { .ds-caret { animation: none; opacity: 1; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Printed Letter",
+    "overview": "One surface, sent with intent. This system was designed to be read, not scanned — unhurried, direct, on-weight. The typography does the communicating; the surfaces stay out of the way. Every choice reinforces the same signal: the person who made this is confident enough not to decorate.\n\nThe palette is pure: warm paper, near-black ink, and two grades of warm gray for hierarchy. No accent color exists because none was earned. Color's absence becomes character. The layout is structured but not rigid — a two-column editorial grid that allocates space with intent, with numbered section heads as a repeating but deliberate system marker.\n\nThis system explicitly rejects the typical developer portfolio playbook (skill bars, project grids, GitHub-flavored cards), the SaaS landing-page aesthetic (gradient accents, feature sections, dark-mode hero), and recruiter-template conventions (icon timelines, color-coded role tags).",
+    "keyCharacteristics": [
+      "Monochromatic: warm paper + near-black ink, zero accent color",
+      "Single typeface (Geist) at high weight-and-size contrast; no pairing, no decoration",
+      "Completely flat: no shadows, no cards, no elevation except one backdrop blur on the sticky nav",
+      "Negative tracking throughout; wide tracking reserved for all-caps metadata labels only",
+      "Spacing varies section to section for rhythm",
+      "One animated element: a hardware-stepped blinking caret on the hero name, reduced-motion aware"
+    ],
+    "rules": [
+      { "name": "The No Accent Rule", "body": "No accent color exists. This is not an omission; it is the voice. If a new component requires emphasis, reach for weight, size, or whitespace — not color.", "section": "colors" },
+      { "name": "The One Family Rule", "body": "Geist is the only typeface. Pairing is prohibited. All hierarchy comes from scale, weight, and tracking contrast within the family.", "section": "typography" },
+      { "name": "The Tracking Inversion Rule", "body": "Body and heading text tracks tighter than the optical default (−0.005em to −0.045em). Labels track wide (+0.18em, uppercase). Tight = voice; wide = metadata. Never swap these.", "section": "typography" },
+      { "name": "The No-Shadow Rule", "body": "No new component may use box-shadow for decorative or structural elevation. If a component needs to read as distinct from the background, use a 1px full border, a background tint, or whitespace.", "section": "elevation" },
+      { "name": "The Blur Exception", "body": "Backdrop blur is reserved for the sticky navigation only. It must never appear on cards, modals, tooltips, drawers, or any other component.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Geist exclusively. One family, all hierarchy through scale, weight, and tracking contrast.",
+      "Do keep letter-spacing negative on all display and body text (minimum −0.005em). Positive tracking is reserved for all-caps labels at 12px only.",
+      "Do enforce WCAG AA contrast at every size. Caption Gray (#6f6860) is the absolute floor.",
+      "Do use full borders (1px) or background tints when a component needs visual distinction. Never border-left as a stripe.",
+      "Do vary vertical spacing section to section. Same padding everywhere is monotony.",
+      "Do respect prefers-reduced-motion. The caret is the sole animated element; it must freeze when motion is reduced.",
+      "Do align on the baseline. Navigation name and links are align-items: baseline, not center."
+    ],
+    "donts": [
+      "Don't introduce an accent color. The system is monochromatic by intent, not omission.",
+      "Don't add box-shadow to any component. Shadows are architecturally prohibited.",
+      "Don't use backdrop-filter outside the navigation bar.",
+      "Don't introduce a second typeface. No display serif, no monospace for technical signal, no script.",
+      "Don't ship a project grid: no icon + heading + text cards, no same-sized Bento grids, no thumbnail galleries.",
+      "Don't use border-left or border-right greater than 1px as a colored accent stripe on any component.",
+      "Don't use gradient text (background-clip: text + gradient). Prohibited.",
+      "Don't use glassmorphism decoratively. The nav blur is structural; blur + semi-transparent fill on content components is prohibited.",
+      "Don't ship recruiter-template patterns: skill bars, progress indicators, color-coded role tags, icon timelines, GitHub stats widgets.",
+      "Don't ship SaaS landing-page patterns: gradient accents, feature-section icon grids, CTA animations, dark-mode hero sections.",
+      "Don't add a hero image, avatar, or headshot. This is a text-first surface."
+    ]
+  }
+}

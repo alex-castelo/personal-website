@@ -28,11 +28,12 @@ import { portfolio as p } from '../data/portfolio';
   <div class="pf-hero__cta">
     <a href={p.linkedin} target="_blank" rel="noreferrer" class="pf-btn pf-btn--primary">
       LinkedIn
-      <span class="pf-btn__arrow">↗</span>
+      <span class="pf-btn__arrow" aria-hidden="true">↗</span>
+      <span class="sr-only">(opens in new tab)</span>
     </a>
     <a href="#contact" class="pf-btn pf-btn--ghost">
       Get in touch
-      <span class="pf-btn__arrow">↓</span>
+      <span class="pf-btn__arrow" aria-hidden="true">↓</span>
     </a>
   </div>
 </section>
