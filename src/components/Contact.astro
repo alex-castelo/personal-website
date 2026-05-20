@@ -5,7 +5,7 @@ import { portfolio as p } from '../data/portfolio';
 <section id="contact" class="pf-section">
   <div class="pf-secthead">
     <div class="pf-secthead__num">03</div>
-    <div class="pf-secthead__title">Get in touch</div>
+    <h2 class="pf-secthead__title">Get in touch</h2>
   </div>
   <div class="pf-contact__body">
     <div>
@@ -13,7 +13,7 @@ import { portfolio as p } from '../data/portfolio';
       <div class="pf-contact__links">
         <a href={`mailto:${p.email}`} class="pf-contact__link">{p.email}</a>
         <a href={p.linkedin} target="_blank" rel="noreferrer" class="pf-contact__link">
-          {p.linkedinShort} ↗
+          {p.linkedinShort} <span aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
         </a>
       </div>
     </div>
