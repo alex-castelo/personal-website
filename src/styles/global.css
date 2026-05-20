@@ -4,6 +4,8 @@
    Paper background, ink text, no accent color.
    ────────────────────────────────────────────────────────────── */
 
+@import '@fontsource-variable/geist';
+
 :root {
   --paper: #f3efe6;
   --paper-elev: rgba(243, 239, 230, 0.78);
@@ -25,7 +27,7 @@ html, body {
   padding: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: 'Geist', 'Inter', system-ui, sans-serif;
+  font-family: 'Geist Variable', 'Geist', 'Inter', system-ui, sans-serif;
   font-feature-settings: 'ss01', 'ss02', 'cv11';
   -webkit-font-smoothing: antialiased;
   letter-spacing: -0.005em;
@@ -82,6 +84,12 @@ button:focus-visible {
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-thumb { background: rgba(26,26,26,0.15); border-radius: 999px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(26,26,26,0.3); }
+
+/* ── Section anchors: clear sticky nav on scroll/focus ──────── */
+
+#top, #about, #work, #contact {
+  scroll-margin-top: 72px;
+}
 
 /* ── Shell ───────────────────────────────────────────────────── */
 

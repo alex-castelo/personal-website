@@ -7,6 +7,25 @@ import Experience from '../components/Experience.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 import { portfolio as p } from '../data/portfolio';
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const title = `${p.name} — Senior Software Engineer`;
+const description = `${p.name} — Senior Software Engineer based in Barcelona. Frontend architecture, technical culture, and the systems that connect them.`;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: p.name,
+  jobTitle: p.title,
+  url: Astro.site?.href,
+  sameAs: [p.linkedin],
+  email: p.email,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: p.location,
+    addressCountry: 'ES',
+  },
+};
 ---
 
 <!doctype html>
@@ -14,23 +33,33 @@ import { portfolio as p } from '../data/portfolio';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{p.name} — Senior Software Engineer</title>
-    <meta name="description" content="Frontend engineer based in Barcelona. Architecture, technical culture, and the systems that connect them." />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <meta name="color-scheme" content="light" />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={`${p.name} — Senior Software Engineer`} />
-    <meta property="og:description" content="Frontend engineer based in Barcelona. Architecture, technical culture, and the systems that connect them." />
-    <meta property="og:url" content={Astro.url.href} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" as="style" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap"
-    />
+    <meta property="og:site_name" content={p.name} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={new URL('/og.png', Astro.site)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL('/og.png', Astro.site)} />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   </head>
   <body>
     <a href="#main-content" class="pf-skip">Skip to content</a>
