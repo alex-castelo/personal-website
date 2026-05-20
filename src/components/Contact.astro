@@ -1,0 +1,25 @@
+---
+import { portfolio as p } from '../data/portfolio';
+---
+
+<section id="contact" class="pf-section">
+  <div class="pf-secthead">
+    <div class="pf-secthead__num">03</div>
+    <div class="pf-secthead__title">Get in touch</div>
+  </div>
+  <div class="pf-contact__body">
+    <div>
+      <div class="pf-contact__meta-label">Reach me</div>
+      <div class="pf-contact__links">
+        <a href={`mailto:${p.email}`} class="pf-contact__link">{p.email}</a>
+        <a href={p.linkedin} target="_blank" rel="noreferrer" class="pf-contact__link">
+          {p.linkedinShort} ↗
+        </a>
+      </div>
+    </div>
+    <div class="pf-contact__prose">
+      <p class="pf-contact__lede">{p.contact.blurb}</p>
+      <p class="pf-contact__values">{p.contact.values}</p>
+    </div>
+  </div>
+</section>

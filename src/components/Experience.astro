@@ -1,0 +1,23 @@
+---
+import { portfolio as p } from '../data/portfolio';
+---
+
+<section id="work" class="pf-section">
+  <div class="pf-secthead">
+    <div class="pf-secthead__num">02</div>
+    <div class="pf-secthead__title">Selected work</div>
+  </div>
+  <div class="pf-exp">
+    {p.experience.map((role) => (
+      <article class="pf-exp__row">
+        <div class="pf-exp__meta">
+          <div class="pf-exp__dates">{role.dates}</div>
+          <div class="pf-exp__company">{role.company}</div>
+          <div class="pf-exp__role">{role.role}</div>
+          <div class="pf-exp__duration">{role.duration}</div>
+        </div>
+        <p class="pf-exp__narr">{role.narrative}</p>
+      </article>
+    ))}
+  </div>
+</section>

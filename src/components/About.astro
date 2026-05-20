@@ -1,0 +1,18 @@
+---
+import { portfolio as p } from '../data/portfolio';
+---
+
+<section id="about" class="pf-section">
+  <div class="pf-secthead">
+    <div class="pf-secthead__num">01</div>
+    <div class="pf-secthead__title">How I think</div>
+  </div>
+  <div class="pf-about__body">
+    <div></div>
+    <div class="pf-about__prose">
+      {p.about.map((text) => (
+        <p class="pf-about__p">{text}</p>
+      ))}
+    </div>
+  </div>
+</section>

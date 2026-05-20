@@ -1,0 +1,38 @@
+---
+import { portfolio as p } from '../data/portfolio';
+---
+
+<section id="top" class="pf-section pf-hero">
+  <div class="pf-caps pf-hero__kicker">
+    <span>Barcelona · 41.38° N</span>
+    <span class="pf-hero__kicker-sep">—</span>
+    <span>Available {p.updated}</span>
+  </div>
+
+  <h1 class="pf-hero__name">
+    Àlex<br />Castelo<span class="pf-caret" aria-hidden="true"></span>
+  </h1>
+
+  <div class="pf-hero__intro">
+    <div>
+      <div class="pf-hero__title">{p.title}</div>
+      <p class="pf-hero__subtitle">{p.subtitle}</p>
+    </div>
+    <div>
+      {p.hero.map((text) => (
+        <p class="pf-hero__tagline">{text}</p>
+      ))}
+    </div>
+  </div>
+
+  <div class="pf-hero__cta">
+    <a href={p.linkedin} target="_blank" rel="noreferrer" class="pf-btn pf-btn--primary">
+      LinkedIn
+      <span class="pf-btn__arrow">↗</span>
+    </a>
+    <a href="#contact" class="pf-btn pf-btn--ghost">
+      Get in touch
+      <span class="pf-btn__arrow">↓</span>
+    </a>
+  </div>
+</section>
