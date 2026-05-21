@@ -6,7 +6,8 @@ export const portfolio = {
   email: "alexcastelomartinez@gmail.com",
   linkedin: "https://www.linkedin.com/in/alexcastelomartinez/",
   linkedinShort: "linkedin.com/in/alexcastelomartinez",
-  updated: "now",
+  updated: "May 2026",
+  availability: "now",
 
   hero: [
     "Frontend engineer with seven years in the industry, based in Barcelona. I care about how teams build as much as what they build: the architecture, the rituals, the small habits that compound.",
