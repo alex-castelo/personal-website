@@ -9,6 +9,7 @@ export const portfolio = {
   github: "https://github.com/alex-castelo",
   githubShort: "github.com/alex-castelo",
   updated: "May 2026",
+  updatedISO: "2026-06-20",
   availability: "now",
 
   hero: [
