@@ -1,21 +1,24 @@
 export const portfolio = {
   name: "Àlex Castelo",
-  title: "Senior Software Engineer",
-  subtitle: "Frontend architecture, technical culture, and the systems that connect them.",
+  title: "Senior Frontend Engineer",
+  subtitle: "React and Next.js engineer who also speaks fluent Vue and Nuxt. I care about frontend architecture, the technical culture around it, and the systems that connect them.",
   location: "Barcelona",
   email: "alexcastelomartinez@gmail.com",
   linkedin: "https://www.linkedin.com/in/alexcastelomartinez/",
   linkedinShort: "linkedin.com/in/alexcastelomartinez",
+  github: "https://github.com/alex-castelo",
+  githubShort: "github.com/alex-castelo",
   updated: "May 2026",
+  updatedISO: "2026-06-20",
   availability: "now",
 
   hero: [
-    "Frontend engineer with seven years in the industry, based in Barcelona. I care about how teams build as much as what they build: the architecture, the rituals, the small habits that compound.",
+    "Frontend engineer with seven years in the industry, based in Barcelona — most of it deep in React and Next.js, with a Vue and Nuxt past that still shapes how I think about components. I care about how teams build as much as what they build: the architecture, the rituals, the small habits that compound.",
     "I'm interested in code, systems, AI, and everything I haven't figured out yet.",
   ],
 
   about: [
-    "I've spent the last seven years writing frontend code and slowly figuring out that the code is rarely the hard part. The hard part is the team around it: how decisions get made, how context travels, how a codebase stays honest as it grows. I try to be useful on both sides of that line.",
+    "I've spent the last seven years writing frontend code and slowly figuring out that the code is rarely the hard part. The hard part is the team around it: how decisions get made, how context travels, how a codebase stays honest as it grows. I try to be useful on both sides of that line. Most of that work lately has been in React and Next.js; the Vue and Nuxt years before it still inform how I reason about state and structure.",
     "Technical leadership, to me, is a tool, not a title. Sometimes it means pairing with a junior on a tricky migration. Sometimes it means writing the RFC nobody wants to write, or sitting in the meeting where the real decision actually gets made. The point is to multiply what the team can do, not to collect the credit.",
     "I do my best work remote-first, on a product I believe in, with people who are genuinely curious about the craft. Lately I've been spending a lot of time thinking about what AI changes about all of this: the workflows, the leverage, what the next ten years of engineering actually looks like up close.",
   ],
@@ -28,7 +31,7 @@ export const portfolio = {
       dates: "May 2024 — May 2026",
       duration: "2 yrs",
       narrative:
-        "Joined with a brief to push both the architecture and the engineering culture forward. Co-led the migration from a Nuxt 2 monolith to a Next.js monorepo, bootstrapped the company's first design system, and put observability on real footing with Datadog. Spent the last year building the CI/CD discipline and testing habits the team actually uses day to day, and was early to experimenting with MCP and agentic workflows — partly out of curiosity, partly because it's clearly where the work is going.",
+        "Joined with a brief to push both the architecture and the engineering culture forward. Co-led the migration from a Nuxt 2 monolith to a React and Next.js monorepo, bootstrapped the company's first design system, and put observability on real footing with Datadog. Spent the last year building the CI/CD discipline and testing habits the team actually uses day to day, and was early to experimenting with MCP and agentic workflows — partly out of curiosity, partly because it's clearly where the work is going.",
     },
     {
       id: "holaluz-lead",

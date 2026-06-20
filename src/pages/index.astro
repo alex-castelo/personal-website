@@ -9,22 +9,31 @@ import Footer from '../components/Footer.astro';
 import { portfolio as p } from '../data/portfolio';
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const title = `${p.name} — Senior Software Engineer`;
-const description = `${p.name} — Senior Software Engineer based in Barcelona. Frontend architecture, technical culture, and the systems that connect them.`;
+const title = `${p.name} — ${p.title}`;
+const description = `${p.name} — ${p.title} in Barcelona. React and Next.js specialist, fluent in Vue and Nuxt. Architecture and the systems that connect them.`;
 
-const schema = {
+const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: p.name,
   jobTitle: p.title,
+  description: p.subtitle,
   url: Astro.site?.href,
-  sameAs: [p.linkedin],
+  sameAs: [p.linkedin, p.github],
+  knowsAbout: ['React', 'Next.js', 'Vue.js', 'Nuxt', 'TypeScript', 'Frontend architecture', 'Design systems'],
   email: p.email,
   address: {
     '@type': 'PostalAddress',
     addressLocality: p.location,
     addressCountry: 'ES',
   },
+};
+
+const profilePageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  dateModified: p.updatedISO,
+  mainEntity: { '@type': 'Person', name: p.name, url: Astro.site?.href },
 };
 ---
 
@@ -42,6 +51,9 @@ const schema = {
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     <meta name="color-scheme" content="light" />
+    <meta name="author" content={p.name} />
+    <link rel="me" href={p.linkedin} />
+    <link rel="me" href={p.github} />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -51,6 +63,7 @@ const schema = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={new URL('/og.png', Astro.site)} />
+    <meta property="og:image:alt" content={`${p.name} — ${p.title}`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
@@ -61,7 +74,8 @@ const schema = {
     <meta name="twitter:image" content={new URL('/og.png', Astro.site)} />
 
     <!-- JSON-LD -->
-    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(profilePageSchema)} />
   </head>
   <body>
     <a href="#main-content" class="pf-skip">Skip to content</a>
