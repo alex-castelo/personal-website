@@ -27,20 +27,20 @@ export const portfolio = {
     {
       id: "reversehealth",
       role: "Senior Software Engineer",
-      company: "ReverseHealth",
+      company: "Reverse Tech",
       dates: "May 2024 — May 2026",
       duration: "2 yrs",
       narrative:
-        "Joined with a brief to push both the architecture and the engineering culture forward. Co-led the migration from a Nuxt 2 monolith to a React and Next.js monorepo, bootstrapped the company's first design system, and put observability on real footing with Datadog. Spent the last year building the CI/CD discipline and testing habits the team actually uses day to day, and was early to experimenting with MCP and agentic workflows — partly out of curiosity, partly because it's clearly where the work is going.",
+        "Joined the Growth team, which meant living in the sales funnel and the experiments that shape it — landing through checkout, several A/B tests a week, the platform growing from one brand and a couple of products to three brands and dozens. The architecture work ran in parallel: I co-led the migration from a Nuxt 2 monolith to a React and Next.js monorepo, bootstrapped the company's first design system, and put observability and CI/CD on real footing with Datadog and a testing culture the team actually uses. I was early to MCP and agentic workflows too — partly curiosity, partly because it's clearly where the work is going.",
     },
     {
       id: "holaluz-lead",
       role: "Team Lead & Frontend Engineer",
       company: "Holaluz",
-      dates: "Mar 2023 — May 2024",
+      dates: "Jan 2023 — Mar 2024",
       duration: "1 yr 3 mos",
       narrative:
-        "Stepped into a lead role while staying close to the code. The job was less about pushing pixels and more about pushing on the conditions around them: how the team communicated, how engineering decisions connected back to product, how to be a good teammate to people I learned from every day. A year that taught me a lot about restraint.",
+        "Stepped into a lead role on the customer team while staying close to the code. The concrete work was launching Holaluz's native customer app from scratch and the self-service area around it, aimed at growing the solar business and keeping customers around. The rest of the job was quieter: how the team communicated, how engineering decisions connected back to product, how to be a good teammate to people I learned from every day. A year that taught me a lot about restraint.",
     },
     {
       id: "holaluz-dev",
