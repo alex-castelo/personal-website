@@ -16,7 +16,17 @@ import { portfolio as p } from '../data/portfolio';
           <div class="pf-exp__role">{role.role}</div>
           <div class="pf-exp__duration">{role.duration}</div>
         </div>
-        <p class="pf-exp__narr">{role.narrative}</p>
+        <p class="pf-exp__narr">
+          {typeof role.narrative === 'string'
+            ? role.narrative
+            : role.narrative.map((part) =>
+                typeof part === 'string' ? part : (
+                  <a href={part.href} target="_blank" rel="noreferrer" class="pf-exp__link">
+                    {part.text}<span class="sr-only"> (opens in new tab)</span>
+                  </a>
+                )
+              )}
+        </p>
       </article>
     ))}
   </div>

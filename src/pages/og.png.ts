@@ -59,7 +59,7 @@ export const GET: APIRoute = async () => {
           letterSpacing: '0.14em',
           color: '#6f6860',
         },
-        p.location.toUpperCase()
+        `REMOTE · ${p.location.toUpperCase()}`
       ),
       box(
         {

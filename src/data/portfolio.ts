@@ -1,29 +1,45 @@
 export const portfolio = {
   name: "Àlex Castelo",
-  title: "Senior Frontend Engineer",
-  subtitle: "React and Next.js engineer who also speaks fluent Vue and Nuxt. I care about frontend architecture, the technical culture around it, and the systems that connect them.",
+  title: "Senior Product Engineer",
+  subtitle: "Frontend is where I come from; the product is what I care about. These days I work across the whole stack — backend, data, infra, observability — to get it out the door.",
   location: "Barcelona",
   email: "alexcastelomartinez@gmail.com",
   linkedin: "https://www.linkedin.com/in/alexcastelomartinez/",
   linkedinShort: "linkedin.com/in/alexcastelomartinez",
   github: "https://github.com/alex-castelo",
   githubShort: "github.com/alex-castelo",
-  updated: "May 2026",
-  updatedISO: "2026-06-20",
-  availability: "now",
+  updated: "October 2026",
+  updatedISO: "2026-10-25",
+  availability: "for select projects",
 
   hero: [
-    "Frontend engineer with seven years in the industry, based in Barcelona — most of it deep in React and Next.js, with a Vue and Nuxt past that still shapes how I think about components. I care about how teams build as much as what they build: the architecture, the rituals, the small habits that compound.",
+    "Engineer with seven years in the industry, working remotely from Barcelona. Most of it was spent deep in React and Next.js, with a Vue and Nuxt past that still shapes how I think about components. AI made crossing the stack cheap, so now I cross it: APIs, databases, cloud infra, whatever the product needs next. I care about how teams build as much as what they build: the architecture, the rituals, the small habits that compound.",
     "I'm interested in code, systems, AI, and everything I haven't figured out yet.",
   ],
 
   about: [
-    "I've spent the last seven years writing frontend code and slowly figuring out that the code is rarely the hard part. The hard part is the team around it: how decisions get made, how context travels, how a codebase stays honest as it grows. I try to be useful on both sides of that line. Most of that work lately has been in React and Next.js; the Vue and Nuxt years before it still inform how I reason about state and structure.",
+    "I've spent the last seven years writing frontend code and slowly figuring out that the code is rarely the hard part. The hard part is the team around it: how decisions get made, how context travels, how a codebase stays honest as it grows. I try to be useful on both sides of that line. Most of that work has been frontend, in React and Next.js, with Vue and Nuxt years before it. Lately it reaches further down: Node services, Postgres, cloud infrastructure, and the observability that tells you whether any of it works.",
     "Technical leadership, to me, is a tool, not a title. Sometimes it means pairing with a junior on a tricky migration. Sometimes it means writing the RFC nobody wants to write, or sitting in the meeting where the real decision actually gets made. The point is to multiply what the team can do, not to collect the credit.",
     "I do my best work remote-first, on a product I believe in, with people who are genuinely curious about the craft. Lately I've been spending a lot of time thinking about what AI changes about all of this: the workflows, the leverage, what the next ten years of engineering actually looks like up close.",
   ],
 
   experience: [
+    {
+      id: "freelance",
+      role: "Product Engineer",
+      company: "Freelance",
+      dates: "Aug 2026 — Present",
+      duration: "ongoing",
+      narrative: [
+        "Working independently since August. Most of my time goes to ",
+        { text: "Easor", href: "https://easor.com/es/" },
+        ", accounting software for small businesses and freelancers, where I work on a recurring block of hours across the whole product: backend and database work in Node and Postgres, cloud infrastructure, observability, the frontend, and the quieter job of helping the team work better together. Alongside it, I've built the corporate sites for ",
+        { text: "Pulppa", href: "https://www.pulppa.es/" },
+        ", an advertising agency, and ",
+        { text: "Inari", href: "https://www.inari.tv/" },
+        ", a drone company. Everything except the design, from the first commit to production.",
+      ],
+    },
     {
       id: "reversehealth",
       role: "Senior Software Engineer",
@@ -73,7 +89,7 @@ export const portfolio = {
 
   contact: {
     blurb:
-      "I'm open to senior engineering roles — full remote, technical leadership as a tool not a title, at companies building something that matters to them.",
+      "I'm freelancing right now. Most of my time goes to one main client, and I take on a small number of other projects alongside it. If you're building something and need someone who can carry it across the stack, I'd like to hear about it.",
     values:
       "Mission alignment matters to me, so I tend not to engage with opportunities in gambling, adult content, or anything that profits from making people worse off. Otherwise, I'm easy to reach.",
   },
